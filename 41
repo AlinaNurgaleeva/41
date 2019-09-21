@@ -1,0 +1,11 @@
+from Euler import is_pandigital, prime_sieve
+def fn(n):
+    for px in p:
+        if px<=n: return px
+    return -1
+
+p=[k for k in prime_sieve(7654321)[::-1] if k>1000000 and is_pandigital(k, 7)]
+p+=[k for k in prime_sieve(4321)[::-1] if k>1000 and is_pandigital(k, 4)]
+
+k = int(input('Find the first pandigital prime below? '))
+print fn(k)
